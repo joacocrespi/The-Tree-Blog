@@ -1,0 +1,21 @@
+<%- include("../partials/header.ejs") %>
+
+<form action="/update?_method=PATCH" method="POST" class="container">
+	<div class="mb-3">
+		<label for="postTitle" class="form-label">Update Title</label>
+		<input
+			type="text"
+			class="form-control"
+			name="postTitle"
+			value="<%= locals.userPostT %>" />
+	</div>
+	<div class="mb-3">
+		<label for="postBody" class="form-label">Update Body</label>
+		<textarea class="form-control overflow-auto" name="postBody" rows="8">
+<%= locals.userPostB.replace(/<br>/g, '\n') %></textarea
+		>
+	</div>
+	<button type="submit" class="btn btn-success">Update</button>
+</form>
+
+<%- include("../partials/footer.ejs") %>

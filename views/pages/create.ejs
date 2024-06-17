@@ -1,0 +1,20 @@
+<%- include("../partials/header.ejs") %>
+
+<form action="/submit" method="POST" class="container">
+	<div class="mb-3">
+		<label for="postTitle" class="form-label">Title</label>
+		<input type="text" class="form-control" name="postTitle" />
+	</div>
+	<div class="mb-3">
+		<label for="postBody" class="form-label"
+			>Include your post on the Tree Blog</label
+		>
+		<textarea
+			class="form-control overflow-auto"
+			name="postBody"
+			rows="8"></textarea>
+	</div>
+	<button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+<%- include("../partials/footer.ejs") %>

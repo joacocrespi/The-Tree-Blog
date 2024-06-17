@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container border-bottom">
+	<div class="border-bottom">
+		<h3>Create a new post for the Blog!</h3>
+		<a href="/create" class="btn btn-success mb-4">Create Now</a>
+	</div>
+	<div class="mt-5"> 
+		<h3><%= locals.userPostT %></h3>
+		<p><%= locals.userPostB %></p>
+			<% if(locals.userPostT) {%>
+			<a href="/update" class="btn btn-success mb-4">Edit Post</a>
+		</div> 
+		<%}%>
+</div>
+
+<%-include("./pages/post1.ejs")%>
+<%-include("./pages/post2.ejs")%> 
+<%-include("partials/footer.ejs")%>
+
